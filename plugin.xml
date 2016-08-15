@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-    id="com.cesidiodibenedetto.filechooser"
+    id="com.openexchange.cordova.filechooser"
     version="1.0.1">
     <name>FileChooser</name>
     <description>File Chooser for Cordova to overcome Android 4.4 issues outlined here: https://issues.apache.org/jira/browse/CB-5294 and https://code.google.com/p/android/issues/detail?id=62220</description>
@@ -16,7 +16,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FileChooser" >
-                <param name="android-package" value="com.cesidiodibenedetto.filechooser.FileChooser"/>
+                <param name="android-package" value="com.openexchange.cordova.filechooser.FileChooser"/>
             </feature>
         </config-file>
 
@@ -64,7 +64,7 @@
         </config-file>
 
         <!-- cordova plugin src files -->
-        <source-file src="src/android/FileChooser.java" target-dir="src/com/cesidiodibenedetto/filechooser" />
+        <source-file src="src/android/FileChooser.java" target-dir="src/com/openexchange/cordova/filechooser" />
         <source-file src="src/android/filechooser/FileChooserActivity.java" target-dir="src/com/ipaulpro/afilechooser" />
         <source-file src="src/android/filechooser/FileListAdapter.java" target-dir="src/com/ipaulpro/afilechooser" />
         <source-file src="src/android/filechooser/FileListFragment.java" target-dir="src/com/ipaulpro/afilechooser" />

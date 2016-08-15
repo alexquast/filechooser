@@ -1,4 +1,4 @@
-package com.cesidiodibenedetto.filechooser;
+package com.openexchange.cordova.filechooser;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +25,7 @@ import com.ipaulpro.afilechooser.utils.FileUtils;
 /**
  * FileChooser is a PhoneGap plugin that acts as polyfill for Android KitKat and web
  * applications that need support for <input type="file">
- * 
+ *
  */
 public class FileChooser extends CordovaPlugin {
 
