@@ -64,7 +64,7 @@
         </config-file>
 
         <!-- cordova plugin src files -->
-        <source-file src="src/android/FileChooser.java" target-dir="src/com/openexchange/cordova/filechooser" />
+        <source-file src="src/android/FileChooser.java" target-dir="src/com/ianhanniballake/filechooser" />
         <source-file src="src/android/filechooser/FileChooserActivity.java" target-dir="src/com/ipaulpro/afilechooser" />
         <source-file src="src/android/filechooser/FileListAdapter.java" target-dir="src/com/ipaulpro/afilechooser" />
         <source-file src="src/android/filechooser/FileListFragment.java" target-dir="src/com/ipaulpro/afilechooser" />
