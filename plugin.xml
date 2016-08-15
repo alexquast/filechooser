@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
     id="com.cesidiodibenedetto.filechooser"
-    version="1.0.0">
+    version="1.0.1">
     <name>FileChooser</name>
     <description>File Chooser for Cordova to overcome Android 4.4 issues outlined here: https://issues.apache.org/jira/browse/CB-5294 and https://code.google.com/p/android/issues/detail?id=62220</description>
     <license>MIT</license>
@@ -43,24 +43,24 @@
                 android:label="@string/choose_file" >
                 <intent-filter>
                     <action android:name="android.intent.action.GET_CONTENT" />
-
                     <category android:name="android.intent.category.DEFAULT" />
                     <category android:name="android.intent.category.OPENABLE" />
-
                     <data android:mimeType="*/*" />
                 </intent-filter>
             </activity>
             <provider
                 android:name="com.ianhanniballake.localstorage.LocalStorageProvider"
-                android:authorities="com.ianhanniballake.localstorage.documents"
+                android:authorities="com.openexchange.cordova.localstorage.documents"
                 android:enabled="@bool/use_provider"
                 android:exported="true"
                 android:grantUriPermissions="true"
+                android:readPermission="my.test.readpermission"
+                android:writePermission="my.test.writepermission"
                 android:permission="android.permission.MANAGE_DOCUMENTS" >
                     <intent-filter>
                         <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
                     </intent-filter>
-            </provider>            
+            </provider>
         </config-file>
 
         <!-- cordova plugin src files -->
@@ -69,7 +69,7 @@
         <source-file src="src/android/filechooser/FileListAdapter.java" target-dir="src/com/ipaulpro/afilechooser" />
         <source-file src="src/android/filechooser/FileListFragment.java" target-dir="src/com/ipaulpro/afilechooser" />
         <source-file src="src/android/filechooser/FileLoader.java" target-dir="src/com/ipaulpro/afilechooser" />
-        <source-file src="src/android/filechooser/FileUtils.java" target-dir="src/com/ipaulpro/afilechooser/utils" />        
+        <source-file src="src/android/filechooser/FileUtils.java" target-dir="src/com/ipaulpro/afilechooser/utils" />
         <source-file src="src/android/filechooser/LocalStorageProvider.java" target-dir="src/com/ianhanniballake/localstorage" />
         <source-file src="src/android/filechooser/libs/android-support-v4.jar" target-dir="libs/" />
 
@@ -100,6 +100,6 @@
         <source-file src="src/android/filechooser/res/values/dimens.xml" target-dir="res/values" />
         <source-file src="src/android/filechooser/res/values/styles.xml" target-dir="res/values" />
         <source-file src="src/android/filechooser/res/values-v19/bool.xml" target-dir="res/values-v19" />
-                
+
     </platform>
 </plugin>
